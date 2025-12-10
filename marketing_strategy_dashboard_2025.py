@@ -244,7 +244,7 @@ if uploaded_file is not None:
             with col2:
                 st.metric("Total Views", f"{df['Number_of_Views'].sum():,.0f}")
             with col3:
-                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/10")
+                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/5")
             with col4:
                 st.metric("Categories", df['Category'].nunique())
             with col5:
@@ -800,4 +800,5 @@ st.markdown("""
         <p>🎬 IMovie Marketing Strategy Dashboard | December 2025</p>
         <p style='font-size: 0.9rem;'>Designed for managerial insights and data-driven decision making</p>
     </div>
+
 """, unsafe_allow_html=True)
