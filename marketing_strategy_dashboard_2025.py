@@ -663,7 +663,7 @@ if uploaded_file is not None:
             with col2:
                 st.metric("Total Views", f"{df['Number_of_Views'].sum():,.0f}")
             with col3:
-                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/10")
+                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/5")
             with col4:
                 st.metric("Categories", df['Category'].nunique())
             with col5:
@@ -1181,7 +1181,7 @@ if uploaded_file is not None:
                 },
                 {
                     "title": "⭐ Quality Focus",
-                    "description": f"December average rating is **{avg_december_rating:.2f}/10**. Focus on high-quality content.",
+                    "description": f"December average rating is **{avg_december_rating:.2f}/5**. Focus on high-quality content.",
                     "action": "Promote films with ratings above 7.0 to maintain brand reputation"
                 },
                 {
