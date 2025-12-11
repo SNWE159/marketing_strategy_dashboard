@@ -663,7 +663,7 @@ if uploaded_file is not None:
             with col2:
                 st.metric("Total Views", f"{df['Number_of_Views'].sum():,.0f}")
             with col3:
-                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/5")
+                st.metric("Avg Rating", f"{df['Viewer_Rate'].mean():.2f}/10")
             with col4:
                 st.metric("Categories", df['Category'].nunique())
             with col5:
@@ -995,7 +995,18 @@ if uploaded_file is not None:
                 (df['Language'].isin(selected_languages))
             ]
             
-            st.info(f"Showing data for {len(filtered_df)} films")
+            st.markdown(f"""
+                <div style='background-color: rgba(79, 172, 254, 0.2); 
+                            padding: 12px; 
+                            border-radius: 8px; 
+                            border-left: 4px solid #4facfe;
+                            margin-top: 10px;
+                            margin-bottom: 20px;'>
+                    <p style='color: white !important; margin: 0; font-size: 1rem;'>
+                        <span style='color: white !important;'>Showing data for {len(filtered_df)} films</span>
+                    </p>
+                </div>
+            """, unsafe_allow_html=True)
             
             # Category-Language cross analysis
             st.subheader("🔄 Category-Language Cross Analysis")
@@ -1247,28 +1258,67 @@ if uploaded_file is not None:
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                st.info("""
-                **Engagement Metrics**
-                - View count increase
-                - Watch time duration
-                - Completion rate
-                """)
+                st.markdown("""
+                    <div style='background-color: rgba(79, 172, 254, 0.2); 
+                                padding: 20px; 
+                                border-radius: 12px; 
+                                border-left: 4px solid #4facfe;'>
+                        <p style='color: white !important; margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 600;'>
+                            <strong style='color: white !important;'>Engagement Metrics</strong>
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - View count increase
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Watch time duration
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Completion rate
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
             
             with col2:
-                st.info("""
-                **Acquisition Metrics**
-                - New subscribers
-                - Trial conversions
-                - Referral signups
-                """)
+                st.markdown("""
+                    <div style='background-color: rgba(79, 172, 254, 0.2); 
+                                padding: 20px; 
+                                border-radius: 12px; 
+                                border-left: 4px solid #4facfe;'>
+                        <p style='color: white !important; margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 600;'>
+                            <strong style='color: white !important;'>Acquisition Metrics</strong>
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - New subscribers
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Trial conversions
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Referral signups
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
             
             with col3:
-                st.info("""
-                **Retention Metrics**
-                - Churn rate
-                - Active users
-                - Content satisfaction
-                """)
+                st.markdown("""
+                    <div style='background-color: rgba(79, 172, 254, 0.2); 
+                                padding: 20px; 
+                                border-radius: 12px; 
+                                border-left: 4px solid #4facfe;'>
+                        <p style='color: white !important; margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 600;'>
+                            <strong style='color: white !important;'>Retention Metrics</strong>
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Churn rate
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Active users
+                        </p>
+                        <p style='color: #c0c0c0 !important; margin: 5px 0; font-size: 0.95rem;'>
+                            - Content satisfaction
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
         
         # Data export option
         st.markdown("---")
