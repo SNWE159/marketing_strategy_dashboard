@@ -517,7 +517,6 @@ with st.sidebar:
     
     if uploaded_file:
         st.success("✅ File uploaded successfully!")
-        st.balloons()
 
 # Data loading and preprocessing function
 @st.cache_data
@@ -1181,7 +1180,7 @@ if uploaded_file is not None:
                 },
                 {
                     "title": "⭐ Quality Focus",
-                    "description": f"December average rating is **{avg_december_rating:.2f}/5**. Focus on high-quality content.",
+                    "description": f"December average rating is **{avg_december_rating:.2f}/10**. Focus on high-quality content.",
                     "action": "Promote films with ratings above 4.0 to maintain brand reputation"
                 },
                 {
@@ -1414,4 +1413,3 @@ st.markdown("""
         <p style='font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem;'>Designed for managerial insights and data-driven decision making</p>
     </div>
 """, unsafe_allow_html=True)
-
